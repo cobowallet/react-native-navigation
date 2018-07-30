@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.RelativeLayout;
 
@@ -92,7 +93,6 @@ public class SideMenu extends SlidingMenu {
 
     private void initContentContainer() {
         contentContainer = new RelativeLayout(getContext());
-        contentContainer.setBackgroundColor(Color.WHITE);
         contentContainer.setId(ViewUtils.generateViewId());
         setContent(contentContainer);
     }
@@ -106,7 +106,7 @@ public class SideMenu extends SlidingMenu {
         setMenu(sideMenuView);
 
         if (params.fixedWidth > 0) {
-            setBehindWidth(params.fixedWidth);
+            setBehindWidth(dp2px(params.fixedWidth));
         }
 
         if (params.disableOpenGesture) {
@@ -114,6 +114,10 @@ public class SideMenu extends SlidingMenu {
         }
 
         menuView = sideMenuView;
+    }
+
+    private int dp2px(int dp) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
     private void setScreenEventListener() {
