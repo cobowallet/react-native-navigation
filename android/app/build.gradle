@@ -56,6 +56,9 @@ dependencies {
     // third party
     compile "com.aurelhubert:ahbottomnavigation:2.0.6"
     compile 'com.balysv.materialmenu:material-menu-toolbar:1.5.4'
+    compile ('com.github.huazhouwang:SlidingMenu:ffc00ba13b9a11a40cb730235470bf81a9e61ed5') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
 
     // tests
     testCompile "junit:junit:4.12"
