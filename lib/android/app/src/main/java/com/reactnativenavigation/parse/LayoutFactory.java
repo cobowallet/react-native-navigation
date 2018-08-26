@@ -114,10 +114,6 @@ public class LayoutFactory {
 			sideMenuController.setLeftController(childControllerLeft);
 		}
 
-		if (childControllerRight != null) {
-			sideMenuController.setRightController(childControllerRight);
-		}
-
 		return sideMenuController;
 	}
 
