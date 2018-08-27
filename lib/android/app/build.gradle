@@ -71,7 +71,10 @@ allprojects { p ->
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile ('com.github.cobowallet:SlidingMenu:ffc00ba13b9a11a40cb730235470bf81a9e61ed5') {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:support-v4:26.1.0'
