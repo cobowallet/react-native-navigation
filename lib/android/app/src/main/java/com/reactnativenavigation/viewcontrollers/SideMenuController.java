@@ -59,7 +59,7 @@ public class SideMenuController extends ParentController<SlidingMenu> {
 
         slidingMenu.setMode(SlidingMenu.LEFT);
         slidingMenu.setFadeEnabled(false);
-        slidingMenu.setBehindOffset(dp2px(getActivity(), 60));
+        slidingMenu.setBehindOffset(dp2px(getActivity(), 55));
         slidingMenu.setShadowWidth(dp2px(getActivity(), 50));
         slidingMenu.setShadowDrawable(R.drawable.slidind_menu_shadow);
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
